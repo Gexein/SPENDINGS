@@ -1,0 +1,62 @@
+@import '../../shared/styles/mixins.scss';
+
+.header {
+    background-color: var(--color-background);
+
+
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+        padding-block: 10px;
+        animation: scaleRight .5s backwards;
+
+        @include mobile {
+            gap: 15px;
+        }
+
+        @include mobile-s {
+            gap: 10px;
+        }
+
+        & nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            font-size: 20px;
+
+            @include mobile {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            @include mobile-s {
+                gap: 10px;
+                font-size: 10px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+            }
+
+
+        }
+
+
+    }
+
+    &__logo {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-green-salad);
+        -webkit-text-stroke: .9px black;
+
+        @include mobile {
+            font-size: 16px;
+            -webkit-text-stroke: .5px black;
+        }
+    }
+}

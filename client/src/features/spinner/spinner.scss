@@ -1,0 +1,24 @@
+.spinner {
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-block: 40vh;
+    }
+
+    &__spinner {
+        min-width: 100px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 15px dashed var(--color-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        animation: spin 1s cubic-bezier(0.3, 0.46, 0.43, 0.76) infinite;
+    }
+
+
+}

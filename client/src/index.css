@@ -1,0 +1,9 @@
+@import './shared/styles/reset.css';
+@import './shared/styles/utils.scss';
+@import './shared/styles/vars.css';
+@import './shared/styles/animations.css';
+
+#root {
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+}

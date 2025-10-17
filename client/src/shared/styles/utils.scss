@@ -1,0 +1,143 @@
+@import './mixins.scss';
+
+.container {
+    max-width: 1200px;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+// .button-link {
+//     border: 1.5px solid black;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: all .2s;
+//     padding: 10px 15px;
+
+//     & li {
+//         text-align: center;
+//     }
+
+//     &:nth-last-child(1):nth-child(odd) {
+//         @include mobile-s {
+//             grid-column: 1 / -1;
+//         }
+//     }
+
+//     @include mobile-s {
+//         padding: 5px 7px;
+//     }
+
+//     @include hover {
+//         background-color: var(--color-green);
+//         color: white;
+//     }
+
+
+
+//     &[disabled] {
+//         cursor: not-allowed;
+//     }
+// }
+
+.button {
+    background-color: var(--color-green-salad);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 10px 15px;
+
+    &:enabled {
+        @include hover {
+            background-color: var(--color-green);
+            color: white;
+
+        }
+    }
+
+
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    background-color: var(--color-background);
+    padding: 20px 30px;
+    border-radius: 15px;
+    animation: jello .5s backwards;
+
+    @include mobile {
+        gap: 5px;
+    }
+
+    &__title {
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+
+}
+
+.fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+
+    @include mobile {
+        gap: 5px;
+    }
+}
+
+.input {
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+}
+
+.label {
+    color: grey;
+    align-self: flex-start;
+    font-size: 14px;
+
+    @include mobile {
+        font-size: 10px;
+    }
+
+}
+
+.error__container {
+    height: 12px;
+    align-self: flex-start;
+    font-size: 10px;
+    color: grey;
+
+    @include mobile {
+        font-size: 8px;
+    }
+
+    &.header {
+        text-align: center;
+        align-self: center;
+        font-size: 12px;
+        color: black;
+    }
+}
+
+.hasAccount {
+    font-size: 10px;
+    height: 15px;
+    color: grey;
+    border-bottom: .5px solid grey;
+    cursor: pointer;
+    margin-top: 10px;
+}
