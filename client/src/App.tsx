@@ -7,51 +7,6 @@ import { observer } from "mobx-react-lite"
 import { check } from "./api/userApi"
 import { Spinner } from "./features"
 
-
-
-
-// const App = observer(() => {
-//   const { user, spendings } = useContext(Context)
-//   console.log(user)
-//   console.log(spendings)
-
-//   const router = createBrowserRouter(createRoutesFromElements(
-//     <Route path="/" element={<RootLayout />} >
-//       <Route index element={<HomePage />} />
-//       <Route path="Auth" element={<AuthPage />} />
-//       {user.isAuth
-//         ? (<>
-//           <Route path="Spendings" element={<SpendingsPage />} />
-//           <Route path="Account" element={<AccountPage />} />
-//           <Route path="Admin" element={<AdminPage />} />
-//         </>)
-//         : (<>
-//           <Route path="Spendings" element={<UnathorizedPage />} />
-//           <Route path="Account" element={<UnathorizedPage />} />
-//           <Route path="Admin" element={<UnathorizedPage />} />
-//         </>)
-//       }
-//       <Route path="*" element={<NotFoundPage />} />
-
-//     </Route>
-//   ))
-
-//   return (
-//     <>
-//       <RouterProvider router={router} />
-//     </>
-//   )
-
-
-// })
-
-
-
-
-
-
-
-
 const App = observer(() => {
   const { user } = useContext(Context)
   const [loading, setLoading] = useState(true)
